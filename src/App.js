@@ -14,7 +14,7 @@ function App() {
       <NavbarTemplate />
       <BrowserRouter>
         <Route component={Home} path="/" exact />
-        <Route component={Detail} path="/pokemon" exact />
+        <Route component={Detail} path="/pokemon/:name" exact />
       </BrowserRouter>
     </div>
   );

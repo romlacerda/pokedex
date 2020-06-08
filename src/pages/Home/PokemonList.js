@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import api from '../../services/api';
 
 const PokemonList = () => {
@@ -11,6 +12,7 @@ const PokemonList = () => {
     });
   }, []);
 
+
   return (
     <table>
       <thead>
@@ -21,6 +23,9 @@ const PokemonList = () => {
           <tr>
             <td key={poke.name}>
               {poke.name}
+            </td>
+            <td>
+              <Link to={`/pokemon/${poke.name}`}>Visualizar</Link>
             </td>
           </tr>
         ))}
