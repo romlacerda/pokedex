@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
-const Container = styled.nav`
-  width: 100%;
+const Container = styled.div`
   margin: 0 5%;
   display: flex;
 `;
