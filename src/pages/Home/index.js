@@ -6,6 +6,8 @@ import Container from '../../components/Container/styles';
 import Input from '../../components/Input/styles';
 import Button from '../../components/Button/styles';
 import Wrapper from '../../components/Wrapper/styles';
+import Paper from '../../components/Paper/styles';
+import BackHeader from '../../components/BackHeader';
 
 const Home = () => {
   const [searched, setSearched] = useState('');
@@ -21,18 +23,21 @@ const Home = () => {
   }
 
   return (
-    <Container>
-      <div style={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
-        <Wrapper style={{ marginTop: '1%' }}>
-          <Input type="text" value={searched} onChange={handleSearchedChange} flex="0.1 auto" />
-          <Button type="submit" onClick={handleSearchSubmit} flex="0.02 auto">
-            <FiSearch size={20} />
-          </Button>
-        </Wrapper>
-        <div style={{ marginTop: '2%' }}>
-          <PokemonList />
+    <Container flexD="c">
+      <BackHeader title="lista de pokémons" back={false} />
+      <Paper>
+        <div style={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
+          <Wrapper style={{ marginTop: '1%' }}>
+            <Input type="text" value={searched} onChange={handleSearchedChange} flex="0.1 auto" />
+            <Button type="submit" onClick={handleSearchSubmit} flex="0.02 auto">
+              <FiSearch size={20} />
+            </Button>
+          </Wrapper>
+          <div style={{ marginTop: '2%' }}>
+            <PokemonList />
+          </div>
         </div>
-      </div>
+      </Paper>
     </Container>
   );
 };

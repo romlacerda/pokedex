@@ -6,6 +6,8 @@ const Input = styled.input`
   flex: ${(props) => props.flex};
   margin-right: 1%;
   font-size: 1em;
+  border: 1px solid #bbb6b6;
+  padding-left: 10px;
 `;
 
 export default Input;
